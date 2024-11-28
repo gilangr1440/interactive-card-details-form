@@ -1,0 +1,422 @@
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 100vw;
+  background: url(../../images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.main-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-height: 668px) {
+  .main-section {
+    height: 100vh;
+  }
+}
+.card-section {
+  position: relative;
+  width: 90%;
+  margin: 35px auto;
+  aspect-ratio: 10/7.3;
+}
+.card-section__front-container {
+  width: 85%;
+  aspect-ratio: 10/5.5;
+  background: url(../../images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 8px;
+  position: absolute;
+  inset: auto auto 0 0;
+  z-index: 2;
+  box-shadow: 0 10px 35px 0 hsla(278, 68%, 11%, 0.3);
+}
+.card-section__logo-cont {
+  width: 60px;
+  flex-grow: 1;
+}
+.card-section__card-logo {
+  width: 100%;
+}
+
+.card-section__card-number {
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.card-section__card-name-cont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.6em;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+.card-section__holder-name {
+  text-transform: uppercase;
+}
+
+.card-section__back-container {
+  width: 85%;
+  aspect-ratio: 10/5.5;
+  background: url(../../images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  position: relative;
+  inset: 0 0 auto 14%;
+  z-index: 1;
+  box-shadow: 0 10px 35px 0 hsla(278, 68%, 11%, 0.3);
+}
+.card-section__cvc-number {
+  position: absolute;
+  inset: 45% 12% auto auto;
+  font-size: 0.6em;
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+.input-section {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section {
+  width: 90%;
+  margin: 20px auto;
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.form-section__form-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+.form-section__input-cont {
+  display: flex;
+  flex-direction: column;
+}
+.form-section__form-label {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: uppercase;
+  color: hsl(278, 68%, 11%);
+  letter-spacing: 2px;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.form-section__form-input {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #c4c3c6;
+  outline: none;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  color: hsl(278, 68%, 11%);
+}
+.form-section__form-input.error {
+  border-color: hsl(0, 100%, 66%);
+}
+
+.form-section__form-input:focus {
+  background: linear-gradient(white, white) padding-box, linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+  border-radius: 8px;
+  border: 2px solid transparent;
+}
+
+.form-section__form-input::-moz-placeholder {
+  font-size: 1em;
+  font-family: "Space Grotesk", sans-serif;
+  color: #c4c3c6;
+}
+
+.form-section__form-input::placeholder {
+  font-size: 1em;
+  font-family: "Space Grotesk", sans-serif;
+  color: #c4c3c6;
+}
+
+.form-section__error-cont {
+  height: 13px;
+}
+.form-section__error {
+  display: none;
+}
+
+.form-section__error.error {
+  font-size: 0.7em;
+  color: hsl(0, 100%, 66%);
+  display: initial;
+}
+
+.form-section__bottom-form {
+  display: flex;
+  gap: 12px;
+}
+.form-section__form-date {
+  display: flex;
+  gap: 12px;
+}
+
+.form-section__form-button {
+  width: 100%;
+  height: 50px;
+  background: hsl(278, 68%, 11%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1em;
+  border-radius: 8px;
+}
+.form-section__form-button {
+  cursor: pointer;
+}
+
+.success {
+  width: 90%;
+  margin: 20px auto;
+  display: none;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.success__icon {
+  display: block;
+  margin: 35px auto;
+}
+
+.success__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.success__desc {
+  text-align: center;
+  color: hsl(279, 6%, 55%);
+  margin-bottom: 50px;
+}
+
+.success__button {
+  width: 100%;
+  height: 50px;
+  background: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: "Space Grotesk", sans-serif;
+}
+.success__button:hover {
+  cursor: pointer;
+}
+
+.attribution a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 540px) {
+  body {
+    background-size: 100% 30%;
+  }
+  .card-section {
+    width: 80%;
+    margin: 15px auto;
+  }
+  .form-section {
+    width: 80%;
+  }
+  .success {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    background-size: 100% 30%;
+  }
+  .card-section {
+    width: 75%;
+  }
+  .card-section__front-container {
+    gap: 30px;
+  }
+  .card-section__logo-cont {
+    width: 100px;
+  }
+  .card-section__card-number {
+    font-size: 2em;
+  }
+  .card-section__card-name-cont {
+    font-size: 1.2em;
+  }
+  .card-section__cvc-number {
+    inset: 46% 12% auto auto;
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body {
+    background: url(../../images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 30% 100vh;
+  }
+  .main-section {
+    width: 65%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+  }
+  .card-section {
+    margin: 0;
+    width: auto;
+  }
+  .card-section__front-container {
+    width: 350px;
+    position: relative;
+    inset: auto auto auto -50px;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+  .card-section__logo-cont {
+    width: 75px;
+  }
+  .card-section__card-number {
+    font-size: 1.3em;
+  }
+  .card-section__card-name-cont {
+    font-size: 0.6em;
+  }
+  .card-section__back-container {
+    width: 350px;
+    inset: auto;
+  }
+  .card-section__cvc-number {
+    inset: 46% 12% auto auto;
+    font-size: 0.6em;
+  }
+  .input-section {
+    justify-content: center;
+    align-items: end;
+  }
+  .form-section {
+    margin: 0;
+    max-width: 360px;
+  }
+  .form-section__form-cont {
+    gap: 15px;
+  }
+  .form-section__form-label {
+    font-size: 0.8em;
+  }
+  .form-section__form-input {
+    height: 50px;
+    font-size: 1em;
+    padding: 0 15px;
+  }
+  .form-section__bottom-form {
+    margin-bottom: 10px;
+  }
+  .form-section__form-button {
+    height: 50px;
+    font-size: 1em;
+  }
+  .success {
+    max-width: 360px;
+    margin: 0;
+  }
+  .success__title {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  .success__desc {
+    font-size: 0.8em;
+    margin-bottom: 30px;
+  }
+  .success__button {
+    height: 50px;
+    font-size: 1em;
+  }
+  .attribution {
+    position: absolute;
+    inset: auto auto 8px 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  body {
+    background-size: 32% 100vh;
+  }
+  .main-section {
+    width: 66%;
+  }
+  .card-section__front-container {
+    width: 400px;
+    padding: 30px;
+    gap: 27px;
+    margin-bottom: 30px;
+  }
+  .card-section__card-number {
+    font-size: 1.5em;
+  }
+  .card-section__card-name-cont {
+    font-size: 0.8em;
+  }
+  .card-section__back-container {
+    width: 400px;
+  }
+  .card-section__cvc-number {
+    font-size: 0.8em;
+    inset: 101px 50px auto auto;
+  }
+  .form-section {
+    max-width: 400px;
+  }
+  .form-section__form-cont {
+    gap: 22px;
+  }
+  .form-section__error.error {
+    font-size: 0.9em;
+  }
+}/*# sourceMappingURL=style.css.map */

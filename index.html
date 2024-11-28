@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/CSS/css-reset.css" />
+    <link rel="stylesheet" href="styles/CSS/style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-section">
+      <section class="card-section">
+        <div class="card-section__front-container">
+          <div class="card-section__logo-cont">
+            <img src="images/card-logo.svg" alt="logo" class="card-section__card-logo" />
+          </div>
+          <p class="card-section__card-number">0000 0000 0000 0000</p>
+          <p class="card-section__card-name-cont">
+            <span class="card-section__holder-name">Jane Appleseed</span>
+            <span class="card-section__exp-date">00/00</span>
+          </p>
+        </div>
+        <div class="card-section__back-container">
+          <p class="card-section__cvc-number">000</p>
+        </div>
+      </section>
+      <section class="input-section">
+        <section class="form-section">
+          <form class="form-section__form-cont">
+            <div class="form-section__input-cont">
+              <label for="holder" class="form-section__form-label">Cardholder Name</label>
+              <input type="text" class="form-section__form-input" name="holder" id="holder" placeholder="e.g. Jane Appleseed" autocomplete="off" />
+              <div class="form-section__error-cont">
+                <p class="form-section__error" id="holderError">Cant't be blank</p>
+              </div>
+            </div>
+            <div class="form-section__input-cont">
+              <label for="number" class="form-section__form-label">Card Number</label>
+              <input type="text" class="form-section__form-input" maxlength="19" name="number" id="number" placeholder="e.g. 1234 5678 9123 0000" />
+              <div class="form-section__error-cont">
+                <p class="form-section__error" id="numberError">Cant't be blank</p>
+              </div>
+            </div>
+            <div class="form-section__bottom-form">
+              <div class="form-section__input-cont">
+                <label for="date" class="form-section__form-label">Exp. Date (MM/YY)</label>
+                <div class="form-section__form-date">
+                  <input type="number" maxlength="2" class="form-section__form-input" name="month" id="month" placeholder="MM" min="0" max="12" />
+                  <input type="number" maxlength="2" class="form-section__form-input" name="year" id="year" placeholder="YY" min="0" />
+                </div>
+                <div class="form-section__error-cont">
+                  <p class="form-section__error" id="dateError">Cant't be blank</p>
+                </div>
+              </div>
+              <div class="form-section__input-cont">
+                <label for="cvc" class="form-section__form-label">CVC</label>
+                <input type="number" maxlength="4" class="form-section__form-input" name="cvc" id="cvc" placeholder="e.g. 123" />
+                <div class="form-section__error-cont">
+                  <p class="form-section__error" id="cvcError">Cant't be blank</p>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="form-section__form-button">Confirm</button>
+          </form>
+        </section>
+        <section class="success">
+          <img src="images/icon-complete.svg" alt="icon" class="success__icon" />
+          <h1 class="success__title">Thank you!</h1>
+          <p class="success__desc">We've added your card details</p>
+          <button class="success__button">Continue</button>
+        </section>
+      </section>
+    </main>
+
+    <footer class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.linkedin.com/in/gilangr1440/">Gilang Ramadhan</a>.</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
